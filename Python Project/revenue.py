@@ -10,14 +10,24 @@
     # return revenue - cogs  
 
 
+# INTRODUCTION 
+# INTRODUCTION 
 
-print("This mini ")
-ask_revenue = input('Do you have Total Sales or Revenue ? ')  
+print("\n \t This mini project of This project explores the exciting possibilities that arise when Python is harnessed to address fundamental business problems")
+print("\n \n") 
 
-# def grok(): 
-    # print("sample")
+# print()
+
+# FIRST VALIDATION 
+# FIRST VALIDATION 
+ask_revenue = input('Do you have Total Sales or Revenue ? \n ( yes / no )  : ').lower()
+
+
 
 #------------------------------------------
+
+# Second validation 
+# Second validation 
 def convert (): 
     while True : 
         try : 
@@ -30,10 +40,12 @@ def convert ():
             print(e)
             print("something namo wronasdg change something")
         continue 
+#------------------------------------------
 
 def gross(cogs, revunue) :
     # print(type(cogs))
-    print("#--------------------------------------------")
+    print("-------------------------------------------- \n")
+    
     print("The gross profit :") 
     print(f"Reveunue : {revunue} ,  cogs : {cogs} ")
     print(revunue - cogs)   
@@ -61,7 +73,7 @@ def revenue_sum(sums):
 
 #---------------------------------------------
 
-quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit']
+quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit'] 
 quit_list = [item.lower() for item in quit_list] 
 
 yes = ["yes" , 'Y', "y", 'Oo', "yes" , "oo nga", "yep", "Yep"] 
@@ -70,13 +82,14 @@ yes = [item.lower() for item in yes]
 
 if ask_revenue in yes :
     
-    ask_cogs = input("do you have cost of all goods ? ").lower().strip()
+    ask_cogs = input("\n Do you have cost of all goods ? ").lower().strip()
     
     if ask_cogs in yes : 
         convert() 
-    else :
-        
-        print("#---------------------------------------------------")
+    else :    
+
+        print("\n")
+
         cogs_list = []
         write_cogs = input("Type list of cogs category : ").lower().strip()
         cogs_list.append(write_cogs)
@@ -87,8 +100,7 @@ if ask_revenue in yes :
             if not write_cogs in quit_list : 
                 cogs_list.append(write_cogs)
                 
-            print(cogs_list)
-        
+            print(cogs_list)        
 
         print("#---------------------------")
         print(cogs_list)
@@ -117,9 +129,9 @@ if ask_revenue in yes :
             # revenue = int(input("Input Total sales or revenue :")) 
             while True : 
                 try : 
-                    revenue = int(input("Input Total sales or revenue :")) 
-                    # cogs = int(input("Input all cost of goods : "))               
-                    gross(cogs_val,revenue) 
+                    revenue = int(input("Input Total sales or revenue : ")) 
+                    # cogs = int(input("Input all cost of goods : "))       
+                    gross(cogs_val , revenue) 
                     # grok() 
                     break 
                 except Exception as e: 
