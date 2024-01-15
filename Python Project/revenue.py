@@ -31,24 +31,26 @@ ask_revenue = input('Do you have Total Sales or Revenue ? \n ( yes / no )  : ').
 def convert (): 
     while True : 
         try : 
-            revenue = int(input("Input Total sales or revenue :")) 
-            cogs = int(input("Input all cost of goods : "))               
+            print("\n \n")
+            revenue = int(input("Input Total sales or revenue : ")) 
+            print("\n")
+            cogs = int(input("Input cost of all goods : "))               
             gross(cogs,revenue) 
             # grok() 
             break 
         except Exception as e: 
-            print(e)
-            print("something namo wronasdg change something")
+            # print(e)
+            print(f"\n {e} \n You inputted string, kindly input integers only") 
         continue 
 #------------------------------------------
 
-def gross(cogs, revunue) :
+def gross(cogs, revenue) :
     # print(type(cogs))
-    print("-------------------------------------------- \n")
-    
-    print("The gross profit :") 
-    print(f"Reveunue : {revunue} ,  cogs : {cogs} ")
-    print(revunue - cogs)   
+    print("\n")
+    print(f"Revenue : {revenue} , COGs : {cogs} \n")    
+    grosss =  revenue - cogs
+    print(f" The gross profit \t: \t{revenue - cogs} \n" )       
+    return gross   
     
     
     
@@ -82,7 +84,7 @@ yes = [item.lower() for item in yes]
 
 if ask_revenue in yes :
     
-    ask_cogs = input("\n Do you have cost of all goods ? ").lower().strip()
+    ask_cogs = input("\n Do you have cost of all goods ? ( yes / no) : ").lower().strip()
     
     if ask_cogs in yes : 
         convert() 
@@ -93,39 +95,46 @@ if ask_revenue in yes :
         cogs_list = []
         write_cogs = input("Type list of cogs category : ").lower().strip()
         cogs_list.append(write_cogs)
-        print(cogs_list)
+        print(cogs_list) 
+        print("\n")
+
         while not write_cogs in quit_list : 
             print("if you to quit type (q)")
             write_cogs = input("Type more : ").lower().strip()
             if not write_cogs in quit_list : 
                 cogs_list.append(write_cogs)
                 
-            print(cogs_list)        
+            print(f"{cogs_list} \n")        
 
-        print("#---------------------------")
+        # print(len(cogs_list))   
+        
+        print("\n \n")
         print(cogs_list)
-        print(len(cogs_list))   
+        print()
         print("Define the value of of each cogs list") 
-        print( " List : Value") 
+        print( " List \t \t:  \tValue") 
 
         cogs_values = []
         for x in range(len(cogs_list)) : 
             while True : 
                 try : 
-                    conglest = int(input(f"{cogs_list[x]} : " ))  
+                    conglest = int(input(f"{cogs_list[x]} \t \t: \t" ))  
                     cogs_values.append(conglest)
                     break
                 except : 
-                    print("You inputed string")
+                    print("Invalid input, input integers only\n" )
                     continue 
             
         cogs_values_sum = sum(cogs_values)
-        print(cogs_values_sum)
+        print("---------------------------------------")
+        print(f"Total \t \t: \t{cogs_values_sum}")
 
         # IF BOTH YES !!! 
         
+
+        print("\n")
+
         def convert_value(cogs_val) :
-            print("#----------------------")
             # revenue = int(input("Input Total sales or revenue :")) 
             while True : 
                 try : 
@@ -135,8 +144,9 @@ if ask_revenue in yes :
                     # grok() 
                     break 
                 except Exception as e: 
-                    print(e)
-                    print("something namo wronasdg change something")
+                    
+                    print(f"\n {e}")
+                    print("Unable to validate string, please input integers only \n ")
                 continue 
                     
 
@@ -145,7 +155,6 @@ if ask_revenue in yes :
             
             
 
-        
     
         
     # while True : 
