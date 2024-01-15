@@ -46,8 +46,9 @@ def convert ():
 
 def gross(cogs, revenue) :
     # print(type(cogs))
-    print("\n")
-    print(f"Revenue : {revenue} , COGs : {cogs} \n")    
+    print("\n \n \n")
+    print(f"Revenue \t: \t{revenue}")    
+    print(f"COGS \t \t : \t{cogs} \n")
     grosss =  revenue - cogs
     print(f" The gross profit \t: \t{revenue - cogs} \n" )       
     return gross   
@@ -57,10 +58,10 @@ def gross(cogs, revenue) :
 def revenue_sum(sums): 
     print("#----------------------------------------")
     revenue_sum = sum(sums)
-
     print(revenue_sum) 
-    # print(type(revenue_sum))
     return revenue_sum
+
+    # print(type(revenue_sum))
     # culated_rev(revenue_sum)
 
 # def cogs_sum(sums):
@@ -150,13 +151,9 @@ if ask_revenue in yes :
                 continue 
                     
 
-
         convert_value(cogs_values_sum) 
-            
-            
 
-    
-        
+    # --------------------------------------------------                        
     # while True : 
     #     try : 
     #         revenue = int(input("Input Total sales :")) 
@@ -168,39 +165,44 @@ if ask_revenue in yes :
     #     continue 
     # total_sales = inaput("Input total sales")
     # cogs_def(total_sales) 
+    # ---------------------------------------------------
+        
+
+
 else : 
-    print("I can campute it for yuo") 
+    print("\n \n \n I can campute it for yuo \n ") 
     ask_compute = input("Would you like to compute it ? : ")
+
     if ask_compute in yes : 
         revenue_list = []  
-        revenue_ask = input("What first list in revenue  ? : ")
+        revenue_ask = input("\n What first list in revenue  ? : ")
         revenue_list.append(revenue_ask)
         print(revenue_list)
         
         # quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit']
         while not revenue_ask in quit_list :             
-            print("If the list is okay press : (Q) ")
-            revenue_ask = input("Input other list : ")
+            print("\n \n If the list is okay press : (Q) ")
+            revenue_ask = input("Input other list : ").lower().strip()
             if not revenue_ask in quit_list : 
                 revenue_list.append(revenue_ask)
-            print("#-----------------------------")
+            print("\n \n")
             print(revenue_list)
         
-        print("#----------------------")
-        print(type(len(revenue_list)))
-        print(len(revenue_list))
+        print("\n \n \n")
+        # print(type(len(revenue_list)))
+        # print(len(revenue_list))
         print("Define the value of of each ") 
-        print( " List : Value")
+        print( "List \t \t: \tValue")
         
         valuess = []
         for x in range(len(revenue_list)) : 
             while True : 
                 try : 
-                    congver = int(input(f"{revenue_list[x]} : " ))  
+                    congver = int(input(f"{revenue_list[x]}\t\t: \t" ))  
                     valuess.append(congver)
                     break
                 except : 
-                    print("You inputed string")
+                    print("Invalid input, input integers only\n")
                     continue
             
         revenue_sum(valuess)
@@ -210,9 +212,7 @@ else :
         print("Okay mamatay kang maaga")
 
 
-
-
-    
+# --------------------------------------------------------------------    
 
 # while ask_revenue : 
 #     Revenue = input('Enter Revenue :  ')   
