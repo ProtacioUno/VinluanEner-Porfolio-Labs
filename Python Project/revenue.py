@@ -52,15 +52,26 @@ def gross(cogs, revenue) :
     grosss =  revenue - cogs
     print(f" The gross profit \t: \t{revenue - cogs} \n" )       
     return gross   
-    
-    
-    
-def revenue_sum(sums): 
-    print("#----------------------------------------")
-    revenue_sum = sum(sums)
-    print(revenue_sum) 
-    return revenue_sum
 
+#--------------------------------
+# def revenue_sum(sums):     
+#     revenue_sum = sum(sums)
+#     return revenue_sum
+#------------------------
+
+def rev1_cogs0(revsum) :
+
+    # print()
+    ask_cogs = input("\n Do you have total cost of all goods ? ( yes / no) : ").lower().strip()
+
+    if ask_cogs in yes : 
+        print("yes")
+    
+
+    
+
+    
+    
     # print(type(revenue_sum))
     # culated_rev(revenue_sum)
 
@@ -170,7 +181,7 @@ if ask_revenue in yes :
 
 
 else : 
-    print("\n \n \n I can campute it for yuo \n ") 
+    print("\n \n \n This terminal use to calculate list of business revenue  \n ") 
     ask_compute = input("Would you like to compute it ? : ")
 
     if ask_compute in yes : 
@@ -191,26 +202,31 @@ else :
         print("\n \n \n")
         # print(type(len(revenue_list)))
         # print(len(revenue_list))
-        print("Define the value of of each ") 
-        print( "List \t \t: \tValue")
+        print("Intruction : Define the value of of each revenue list ") 
+        print( "List    \t\t: \tValue")
         
         valuess = []
         for x in range(len(revenue_list)) : 
             while True : 
                 try : 
-                    congver = int(input(f"{revenue_list[x]}\t\t: \t" ))  
+                    congver = int(input(f"{revenue_list[x]}    \t\t: \t" ))  
                     valuess.append(congver)
                     break
                 except : 
                     print("Invalid input, input integers only\n")
                     continue
-            
-        revenue_sum(valuess)
+        
+        revenue_sum = sum(valuess)
+        print("-----------------------------------------")
+        print(f"Total Revenue \t\t: \t{revenue_sum}")
+        rev1_cogs0(revenue_sum)
+        
+        # revenue_sum(valuess) 
+        
 
         # print(revenue_ask[0])
     else :
         print("Okay mamatay kang maaga")
-
 
 # --------------------------------------------------------------------    
 
