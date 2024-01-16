@@ -47,9 +47,10 @@ def convert ():
 def gross(cogs, revenue) :
     # print(type(cogs))
     print("\n \n \n")
-    print(f"Revenue \t: \t{revenue}")    
-    print(f"COGS \t \t : \t{cogs} \n")
+    print(f"Revenue    \t\t: \t{revenue}")    
+    print(f"COGS        \t\t: \t{cogs}")
     grosss =  revenue - cogs
+    print("___________________________________")
     print(f" The gross profit \t: \t{revenue - cogs} \n" )       
     return gross   
 
@@ -62,15 +63,28 @@ def gross(cogs, revenue) :
 def rev1_cogs0(revsum) :
 
     # print()
-    ask_cogs = input("\n Do you have total cost of all goods ? ( yes / no) : ").lower().strip()
+    ask_cogs = input("\n\n\n Do you have total cost of all goods ? ( yes / no) : ").lower().strip()
 
-    if ask_cogs in yes : 
-        print("yes")
-    
+    print("\n \n ")
+    if ask_cogs in yes :         
+        while True :
+            try :
+                yes_no_cogs = int(input("Input cost of all goods : "))        
+                                 
+                print('\n \n it breaks \n \n \n')
+                
+                gross(yes_no_cogs,revsum)
+                
+                
+                break 
+            except Exception as e : 
+                print(f"\n {e} \n You inputted string, kindly input integers only \n \n") 
+            continue 
+        # yes_no_cogs = input("")
+        # print("yes")
+    else : 
+        print("Heheps")
 
-    
-
-    
     
     # print(type(revenue_sum))
     # culated_rev(revenue_sum)
@@ -93,9 +107,7 @@ quit_list = [item.lower() for item in quit_list]
 yes = ["yes" , 'Y', "y", 'Oo', "yes" , "oo nga", "yep", "Yep"] 
 yes = [item.lower() for item in yes]
 
-
-if ask_revenue in yes :
-    
+if ask_revenue in yes :    
     ask_cogs = input("\n Do you have cost of all goods ? ( yes / no) : ").lower().strip()
     
     if ask_cogs in yes : 
@@ -124,13 +136,13 @@ if ask_revenue in yes :
         print(cogs_list)
         print()
         print("Define the value of of each cogs list") 
-        print( " List \t \t:  \tValue") 
+        print( " List    \t\t: \tValue") 
 
         cogs_values = []
         for x in range(len(cogs_list)) : 
             while True : 
                 try : 
-                    conglest = int(input(f"{cogs_list[x]} \t \t: \t" ))  
+                    conglest = int(input(f"{cogs_list[x]}    \t\t: \t" ))  
                     cogs_values.append(conglest)
                     break
                 except : 
@@ -139,7 +151,7 @@ if ask_revenue in yes :
             
         cogs_values_sum = sum(cogs_values)
         print("---------------------------------------")
-        print(f"Total \t \t: \t{cogs_values_sum}")
+        print(f"Total Cogs    \t\t: \t{cogs_values_sum}")
 
         # IF BOTH YES !!! 
         
@@ -182,51 +194,52 @@ if ask_revenue in yes :
 
 else : 
     print("\n \n \n This terminal use to calculate list of business revenue  \n ") 
-    ask_compute = input("Would you like to compute it ? : ")
 
-    if ask_compute in yes : 
-        revenue_list = []  
-        revenue_ask = input("\n What first list in revenue  ? : ")
-        revenue_list.append(revenue_ask)
+    # ask_compute = input("Would you like to compute it ? : ")
+
+    # if ask_compute in yes :
+    revenue_list = []  
+    revenue_ask = input("\n What first list in revenue  ? : ")
+    revenue_list.append(revenue_ask)
+    print(revenue_list)
+    
+    # quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit']
+    while not revenue_ask in quit_list :             
+        print("\n \n If the list is okay press : (Q) ")
+        revenue_ask = input("Input other list : ").lower().strip()
+        if not revenue_ask in quit_list : 
+            revenue_list.append(revenue_ask)
+        print("\n \n")
         print(revenue_list)
-        
-        # quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit']
-        while not revenue_ask in quit_list :             
-            print("\n \n If the list is okay press : (Q) ")
-            revenue_ask = input("Input other list : ").lower().strip()
-            if not revenue_ask in quit_list : 
-                revenue_list.append(revenue_ask)
-            print("\n \n")
-            print(revenue_list)
-        
-        print("\n \n \n")
-        # print(type(len(revenue_list)))
-        # print(len(revenue_list))
-        print("Intruction : Define the value of of each revenue list ") 
-        print( "List    \t\t: \tValue")
-        
-        valuess = []
-        for x in range(len(revenue_list)) : 
-            while True : 
-                try : 
-                    congver = int(input(f"{revenue_list[x]}    \t\t: \t" ))  
-                    valuess.append(congver)
-                    break
-                except : 
-                    print("Invalid input, input integers only\n")
-                    continue
-        
-        revenue_sum = sum(valuess)
-        print("-----------------------------------------")
-        print(f"Total Revenue \t\t: \t{revenue_sum}")
-        rev1_cogs0(revenue_sum)
+    
+    print("\n \n \n")
+    # print(type(len(revenue_list)))
+    # print(len(revenue_list))
+    print("Intruction : Define the value of of each revenue list ") 
+    print( "List    \t\t: \tValue")
+    
+    valuess = []
+    for x in range(len(revenue_list)) : 
+        while True : 
+            try : 
+                congver = int(input(f"{revenue_list[x]}    \t\t: \t" ))  
+                valuess.append(congver)
+                break
+            except : 
+                print("Invalid input, input integers only\n")
+                continue
+    
+    revenue_sum = sum(valuess)
+    print("-----------------------------------------")
+    print(f"Total Revenue \t\t: \t{revenue_sum}")
+    rev1_cogs0(revenue_sum)
         
         # revenue_sum(valuess) 
         
 
         # print(revenue_ask[0])
-    else :
-        print("Okay mamatay kang maaga")
+    # else :
+    #     print("Okay mamatay kang maaga")
 
 # --------------------------------------------------------------------    
 
@@ -240,3 +253,5 @@ else :
 # print(type(Revenue))
 
 # Cogs = input()
+
+
