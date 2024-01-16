@@ -105,7 +105,7 @@ def rev1_cogs0(revsum) :
         print()
         print("Define the value of of each cogs list") 
         print( " List    \t\t: \tValue") 
-    
+
         cogs_values = []
         for x in range(len(cogs_list)) : 
             while True : 
@@ -147,6 +147,7 @@ quit_list = [item.lower() for item in quit_list]
 
 yes = ["yes" , 'Y', "y", 'Oo', "yes" , "oo nga", "yep", "Yep"] 
 yes = [item.lower() for item in yes]
+
 
 if ask_revenue in yes :    
     ask_cogs = input("\n Do you have cost of all goods ? ( yes / no) : ").lower().strip()

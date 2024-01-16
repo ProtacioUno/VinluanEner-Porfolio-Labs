@@ -104,6 +104,7 @@
 # 	print('exsit')
 
 
+
 ## c
 quit = ['Quit' , 'PsSi' , 'SigeS']
 
@@ -113,9 +114,7 @@ for x in range(len(quit)) :
 for quit_l in quit:
 	# print(quit_l)
 	if 'si' in quit_l :
-		print('exist')
-		
-		
+		print('exist')				
 		# break
 	else : 
 		print('not exist ! ')
