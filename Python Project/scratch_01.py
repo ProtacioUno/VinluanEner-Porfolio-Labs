@@ -76,25 +76,25 @@
 
 ## 
 
-quit = ['Quit' , 'PsSi' , 'SigeS']
+# quit = ['Quit' , 'PsSi' , 'SigeS']
 
-for x in range(len(quit)) :
-	quit[x] = quit[x].lower()
+# for x in range(len(quit)) :
+# 	quit[x] = quit[x].lower()
 
-# ['quit', 'pssi', 'siges']
+# OUTPUT : ['quit', 'pssi', 'siges']
 	
 
 ## while this range loop the add iff statemen to check
 ## while this range loop the add iff statemen to check
 # for quit_sep in range(len(quit)) :
-	if quit_sep.find('u')  :
-		print("exist") 
-	else :
-		print("null")
+	# if quit_sep.find('u')  :
+	# 	print("exist") 
+	# else :
+	# 	print("null")
 		
 ## check if find is working 
-	
-text = "helo"
+
+# text = "helo"
 # if text.find('x'):
 # 	print('anjan')
 # else : 
@@ -104,8 +104,25 @@ text = "helo"
 # 	print('exsit')
 
 
+## c
+quit = ['Quit' , 'PsSi' , 'SigeS']
+
+for x in range(len(quit)) :
+	quit[x] = quit[x].lower()
+
+for quit_l in quit:
+	# print(quit_l)
+	if 'si' in quit_l :
+		print('exist')
 		
-# if  "q" in 
+		
+		# break
+	else : 
+		print('not exist ! ')
+
+
+
+
 
 
 
