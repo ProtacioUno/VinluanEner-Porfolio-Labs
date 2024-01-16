@@ -71,8 +71,7 @@ def rev1_cogs0(revsum) :
             try :
                 yes_no_cogs = int(input("Input cost of all goods : "))        
                                  
-                print('\n \n it breaks \n \n \n')
-                
+                print('\n \n it breaks \n \n \n')                
                 gross(yes_no_cogs,revsum)
                 
                 
@@ -83,7 +82,49 @@ def rev1_cogs0(revsum) :
         # yes_no_cogs = input("")
         # print("yes")
     else : 
-        print("Heheps")
+
+        print("Heheps \n\n\n")
+
+        cogs_list = []
+        write_cogs = input("Type list of cogs category : ").lower().strip()
+        cogs_list.append(write_cogs)
+        print(cogs_list) 
+        print("\n")
+
+        while not write_cogs in quit_list : 
+            print("if you to quit type (q)")
+            write_cogs = input("Type more : ").lower().strip()
+            if not write_cogs in quit_list : 
+                cogs_list.append(write_cogs)
+                
+            print(f"{cogs_list} \n")     
+        
+
+        print("\n \n")
+        print(cogs_list)
+        print()
+        print("Define the value of of each cogs list") 
+        print( " List    \t\t: \tValue") 
+    
+        cogs_values = []
+        for x in range(len(cogs_list)) : 
+            while True : 
+                try : 
+                    conglest = int(input(f"{cogs_list[x]}    \t\t: \t" ))  
+                    cogs_values.append(conglest)
+                    break
+                except : 
+                    print("Invalid input, input integers only\n" )
+                    continue 
+            
+        cogs_values_sum = sum(cogs_values)
+        print("---------------------------------------")
+        print(f"Total Cogs    \t\t: \t{cogs_values_sum}")
+
+
+        #------------------------------------------
+
+
 
     
     # print(type(revenue_sum))
@@ -152,6 +193,7 @@ if ask_revenue in yes :
         cogs_values_sum = sum(cogs_values)
         print("---------------------------------------")
         print(f"Total Cogs    \t\t: \t{cogs_values_sum}")
+
 
         # IF BOTH YES !!! 
         
