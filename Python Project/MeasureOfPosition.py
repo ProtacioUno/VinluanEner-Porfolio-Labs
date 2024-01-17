@@ -2,7 +2,7 @@
 
 
 
-dataset = [1 ,2 , 12  , 13 , 19  , 3 , 16 , 10 , 21 ,5 , 8 ,  7 ,14 ,4 ,17 , 1, 9 , 22, 12 , 5 , 15 ,7 , 3 ]  
+dataset = [1 ,28  , 12  , 13 , 19  , 46, 16 , 10 , 21 ,25 , 37 ,  7 ,14 , 32 ,17 , 1, 9 , 22, 12 , 5 , 15 ,24 , 3 , 30 , 43 , 35 ]  
 
 sorting = sorted(dataset)
 
@@ -15,7 +15,7 @@ print("\n \n ")
 
 
 
-DK_list = [1 , 5, 7, 3 , 6]
+DK_list = [1 , 5, 7, 4 , 6 , 3]
 
 
 # print(len(dataset))
@@ -26,7 +26,7 @@ if not DK_list == [] :
 	def decile(i) :
 		answer = (i * (len(dataset) + 1)) / 10	
 
-		print(f"the decile of {i}  are : {answer}   \t:\t {sorting[int (round(answer,0))]}")
+		print(f"the decile of {i}  are in index of : {answer}    \t value : {sorting[int (round(answer,0))-1]}")
 		
 	for x in range(len(DK_list)):
 		decile(DK_list[x])
@@ -39,16 +39,16 @@ else :
 PK_list = [1 ,  50 , 20,  40 , 20 , 69 , 20 ]
 
 
-# if not PK_list == [] :
-# 	print("it meron \n\n") 
+if not PK_list == [] :
+	print("it meron \n\n") 
 
-# 	def percentile(i) :
-# 		answer = (i * (len(dataset) + 1)) / 100	
-# 		print(f"the percentile of {i} are  : {answer}")
+	def percentile(i) :
+		answer = (i * (len(dataset) + 1)) / 100	
+		print(f"the percentile of {i} are in index of : {answer}    \t value : {sorting[int (round(answer,0))-1]}")
 		
-# 	for x in range(len(PK_list)):
-# 		percentile(PK_list[x])
+	for x in range(len(PK_list)):
+		percentile(PK_list[x])
 
-# else :
-# 	print("the percentile list was empty ") 
+else :
+	print("the percentile list was empty ") 
 	
