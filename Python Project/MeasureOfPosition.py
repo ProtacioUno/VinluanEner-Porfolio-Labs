@@ -35,7 +35,6 @@ else :
 	print("the decile list was empty ") 
 	
 
-
 PK_list = [1 ,  50 , 20,  40 , 20 , 69 , 20 ]
 
 
@@ -44,7 +43,7 @@ if not PK_list == [] :
 
 	def percentile(i) :
 		answer = (i * (len(dataset) + 1)) / 100	
-		print(f"the percentile of {i} are in index of : {answer}    \t value : {sorting[int (round(answer,0))-1]}")
+		print(f"the percentile of {i} are in index of : {answer}       \tvalue : {sorting[int (round(answer,0))-1]}")
 		
 	for x in range(len(PK_list)):
 		percentile(PK_list[x])
