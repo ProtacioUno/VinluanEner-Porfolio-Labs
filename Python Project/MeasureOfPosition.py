@@ -13,8 +13,6 @@ print("\n ")
 print(f"The n of Dataset given : {len(sorting)}")
 # print("\n ")
 
-
-
 #--------------------------------------------
 
 ## this list can be change depends on list of "K" in Quartile, Decile or Percentile
@@ -44,12 +42,7 @@ else :
 
 
 #--------------------------------
-
-
-
 # print(len(dataset))
-
-
  
 if not DK_list == [] :
 	print("\n\n\t has decile list ... \n") 
@@ -66,8 +59,6 @@ else :
 	print("\t the decile list was empty ") 
 	
 #-------------------------------------
-
-
 
 if not PK_list == [] :
 	print("\n\n\t has percentile list ... \n") 
