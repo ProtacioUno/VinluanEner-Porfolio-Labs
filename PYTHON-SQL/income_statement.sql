@@ -1,3 +1,4 @@
+USE schema_001; 
 create table income_statement (
 	id INT,
 	business_name VARCHAR(50),
