@@ -22,8 +22,6 @@ print("\n \n")
 # FIRST VALIDATION 
 ask_revenue = input('Do you have Total Sales or Revenue ? \n ( yes / no )  : ').lower()
 
-
-
 #------------------------------------------
 
 # Second validation 
@@ -61,7 +59,7 @@ def gross(cogs, revenue) :
 #------------------------
 
 def rev1_cogs0(revsum) :
-
+    
     # print()
     ask_cogs = input("\n\n\n Do you have total cost of all goods ? ( yes / no) : ").lower().strip()
 
@@ -82,7 +80,6 @@ def rev1_cogs0(revsum) :
         # yes_no_cogs = input("")
         # print("yes")
     else : 
-
         print("Heheps \n\n\n")
 
         cogs_list = []
@@ -122,25 +119,7 @@ def rev1_cogs0(revsum) :
         print(f"Total Cogs    \t\t: \t{cogs_values_sum}")
 
 
-        #------------------------------------------
 
-
-
-    
-    # print(type(revenue_sum))
-    # culated_rev(revenue_sum)
-
-# def cogs_sum(sums):
-#     print("#-----------------------")
-#     revenue_sum 
-# nonloc
-# def culated_rev(revenue_sum) : 
-    
-    # print("it works")
-
-    # print("gumana kaba")
-
-#---------------------------------------------
 
 quit_list = ['Q', 'q', 'quit', 'quits', 'Ayaw', 'enap', 'exit'] 
 quit_list = [item.lower() for item in quit_list] 
@@ -150,6 +129,7 @@ yes = [item.lower() for item in yes]
 
 
 if ask_revenue in yes :    
+    
     ask_cogs = input("\n Do you have cost of all goods ? ( yes / no) : ").lower().strip()
     
     if ask_cogs in yes : 
@@ -171,7 +151,6 @@ if ask_revenue in yes :
                 cogs_list.append(write_cogs)
                 
             print(f"{cogs_list} \n")        
-
         # print(len(cogs_list))   
         
         print("\n \n")
@@ -194,13 +173,8 @@ if ask_revenue in yes :
         cogs_values_sum = sum(cogs_values)
         print("---------------------------------------")
         print(f"Total Cogs    \t\t: \t{cogs_values_sum}")
-
-
         # IF BOTH YES !!! 
-        
-
         print("\n")
-
         def convert_value(cogs_val) :
             # revenue = int(input("Input Total sales or revenue :")) 
             while True : 
@@ -298,3 +272,22 @@ else :
 # Cogs = input()
 
 
+        #------------------------------------------
+
+
+
+    
+    # print(type(revenue_sum))
+    # culated_rev(revenue_sum)
+
+# def cogs_sum(sums):
+#     print("#-----------------------")
+#     revenue_sum 
+# nonloc
+# def culated_rev(revenue_sum) : 
+    
+    # print("it works")
+
+    # print("gumana kaba")
+
+#---------------------------------------------
